@@ -1,11 +1,12 @@
 #Author: Leugim Lim
 #Date: 23/05/2013
 #Version 1.0
-#Description: 
+#Description: Post-apocalyptic text-based games. User type in specific words, the program will print the according statement to each user input. There are two survivable scenarios, with six death-ending scenarios.
 
 import random
 import time
 
+#text fo the intro
 def displayIntro():
     print('You wake up. The Sun hurts your eyes. You check your surroundings; you are in a forest. Something is odd, all the leaves have turned brown; it is still the middle of summer. Checking to see if you are')
     print('unharmed, you notice your skin is purple and viens are prominent. Something must have happened to you; but the only thing you can remember were parts of the war and then a blinding flash of light. You')
@@ -14,6 +15,7 @@ def displayIntro():
 
 ##### STARTING POINT - SELECT THE DESTINATION
 
+#user will select an area, between wasteland or city
 def chooseArea():
     area = ''
     while area != 'wasteland' and area != 'city':
@@ -21,6 +23,7 @@ def chooseArea():
         area = raw_input()
     return area
 
+#checks input, and output the approriate scenario
 def checkArea(chooseArea):
     if chooseArea == 'wasteland' or chooseArea == 'Wasteland':
         print('You chose to brave the empty, arid wasteland.')
@@ -52,6 +55,7 @@ def checkArea(chooseArea):
 
 ### THE WASTELAND CHOICE SECTION - RUN INTO SAVAGE BIKER GANG
 
+#user will choose between the two available actions
 def bikeGang():
     engageGang = ''
     while engageGang != 'fight' and engageGang != 'flee':
@@ -59,6 +63,7 @@ def bikeGang():
         engageGang = raw_input()
     return engageGang
 
+#checks input, and output the approriate scenario
 def checkGang(bikeGang):
     if bikeGang == 'fight' or bikeGang == 'Fight':
         print('How daring! You chose to take on the gang. In an almost berserker fashion, with a boot to the face, you take out the closest biker around you, and went to work!')
@@ -100,6 +105,7 @@ def checkGang(bikeGang):
 
 # CHOSE TO FIGHT THE GANG
 
+#user will choose between the two available actions
 def militaryGuys():
     engageMilitary = ''
     while engageMilitary != 'fight' and engageMilitary != 'reason':
@@ -107,6 +113,7 @@ def militaryGuys():
         engageMilitary = raw_input()
     return engageMilitary
 
+#checks input, and output the approriate scenario
 def checkMilitary(militaryGuys):
     if militaryGuys == 'fight' or militaryGuys == 'Fight':
         print('You chose to do battle against the military troop. Due to your mysterious, superb commanding skills, you and your gang of savages manage to not only defeat, but slaughter the opposing troops!')
@@ -130,6 +137,7 @@ def checkMilitary(militaryGuys):
 
 # CHOSE TO FLEE; FIND A CAVE
 
+#user will choose between the two available actions
 def bearCave():
     engageBear = ''
     while engageBear != 'fight' and engageBear != 'flee':
@@ -137,6 +145,7 @@ def bearCave():
         engageBear = raw_input()
     return engageBear
 
+#checks input, and output the approriate scenario
 def checkCave(bearCave):
     if bearCave == 'fight' or bearCave == 'Fight':
         print('Win or lose, you chose to do battle, and a be a legend!')
@@ -162,7 +171,8 @@ def checkCave(bearCave):
         print('Of course you died! There is a bear in your face, and you did nothing! Then again, it was BEAR! What could you have done that would have mattered?')
 
 ### THE CITY CHOICE SECTION - RUN INTO MUTANT CANNIBALS
-    
+
+#user will choose between the two available actions    
 def crazedMutants():
     engageMutants = ''
     while engageMutants != 'fight' and engageMutants != 'flee':
@@ -170,6 +180,7 @@ def crazedMutants():
         engageMutants = raw_input()
     return engageMutants
 
+#checks input, and output the approriate scenario
 def checkMutants(crazedMutants):
     if crazedMutants == 'fight' or crazedMutants == 'Fight':
         print('Excellent! You are valiant in choosing to ward off these vile creatures!')
@@ -208,6 +219,7 @@ def checkMutants(crazedMutants):
 
 # CHOSE TO FIGHT THE MUTANTS
 
+#user will choose between the two available actions
 def evilAliens():
     engageAliens = ''
     while engageAliens != 'fight' and engageAliens != 'surrender':
@@ -215,6 +227,7 @@ def evilAliens():
         engageAliens = raw_input()
     return engageAliens
 
+#checks input, and output the approriate scenario
 def checkAliens(evilAliens):
     if checkAliens == 'fight' or checkAliens == 'Fight':
         print('You can feel the bite affecting you, might as well go out with a bang!')
@@ -248,6 +261,7 @@ def checkAliens(evilAliens):
 
 # CHOSE TO FLEE; ONTO THE ROOFTOP
 
+#user will choose between the two available actions
 def badRoof():
     spikeChoice = ''
     while spikeChoice != 'fight' and spikeChoice != 'pull':
@@ -255,6 +269,7 @@ def badRoof():
         spikeChoice = raw_input()
     return spikeChoice
 
+#checks input, and output the approriate scenario
 def checkSpike(badRoof):
     if spikeChoice == 'fight' or spikeChoice == 'Fight':
         print('With the last of your strenght, you chose to fight; you have the soul of a warrior!')
